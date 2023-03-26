@@ -1,0 +1,31 @@
+{
+  "notExhibited": {
+    "columns": ["SKU", "Descripcion", "Departanento", "Familia"]
+  },
+  "button": {
+    "back": "Volver",
+    "withoutPosition": "Sin posicion en salon"
+  },
+  "label": {
+    "branches": "Sucursal",
+    "selectItem": "Seleccionar",
+    "department": "Departanento"
+  },
+  "options": {
+    "products": "Referencias (SKU)",
+    "replacement": "Reposición"
+  },
+  "stats": {
+    "total": "Referencias (SKU)",
+    "outOfStock": "Sin stock",
+    "WoInProgress": "OTs en curso",
+    "broken": "Quebrados",
+    "criticality": "Criticidad (90% - 99%)"
+  },
+  "statsRing": {
+    "remaining": "Pendientes",
+    "inProgress": "En ejecucion",
+    "completed": "Completados",
+    "total": "Total"
+  }
+}

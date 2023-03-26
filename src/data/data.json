@@ -1,0 +1,371 @@
+[
+  {
+    "branch": "0",
+    "departmentData": [
+      {
+        "code": "0",
+        "data": [
+          {
+            "title": "total",
+            "completed": 24998,
+            "total": 25158,
+            "remaining": 160,
+            "inProgress": 35
+          },
+          {
+            "title": "outOfStock",
+            "completed": 1887,
+            "total": 2334,
+            "remaining": 447,
+            "inProgress": 76
+          },
+          {
+            "title": "WoInProgress",
+            "completed": 1887,
+            "total": 2334,
+            "remaining": 447,
+            "inProgress": 76
+          },
+          {
+            "title": "broken",
+            "completed": 1887,
+            "total": 2334,
+            "remaining": 447,
+            "inProgress": 76
+          },
+          {
+            "title": "criticality",
+            "completed": 1887,
+            "total": 2334,
+            "remaining": 447,
+            "inProgress": 76
+          }
+        ]
+      },
+      {
+        "code": "1",
+        "data": [
+          {
+            "title": "total",
+            "completed": 1887,
+            "total": 2334,
+            "remaining": 447,
+            "inProgress": 76
+          },
+          {
+            "title": "outOfStock",
+            "completed": 1887,
+            "total": 2334,
+            "remaining": 447,
+            "inProgress": 76
+          },
+          {
+            "title": "WoInProgress",
+            "completed": 1887,
+            "total": 2334,
+            "remaining": 447,
+            "inProgress": 76
+          },
+          {
+            "title": "broken",
+            "completed": 1887,
+            "total": 2334,
+            "remaining": 447,
+            "inProgress": 76
+          },
+          {
+            "title": "criticality",
+            "completed": 1887,
+            "total": 2334,
+            "remaining": 447,
+            "inProgress": 76
+          }
+        ]
+      },
+      {
+        "code": "2",
+        "data": [
+          {
+            "title": "total",
+            "completed": 1887,
+            "total": 2334,
+            "remaining": 447,
+            "inProgress": 76
+          },
+          {
+            "title": "outOfStock",
+            "completed": 1887,
+            "total": 2334,
+            "remaining": 447,
+            "inProgress": 76
+          },
+          {
+            "title": "WoInProgress",
+            "completed": 1887,
+            "total": 2334,
+            "remaining": 447,
+            "inProgress": 76
+          },
+          {
+            "title": "broken",
+            "completed": 1887,
+            "total": 2334,
+            "remaining": 447,
+            "inProgress": 76
+          },
+          {
+            "title": "criticality",
+            "completed": 1887,
+            "total": 2334,
+            "remaining": 447,
+            "inProgress": 76
+          }
+        ]
+      },
+      {
+        "code": "3",
+        "data": [
+          {
+            "title": "total",
+            "completed": 1887,
+            "total": 2334,
+            "remaining": 447,
+            "inProgress": 76
+          },
+          {
+            "title": "outOfStock",
+            "completed": 1887,
+            "total": 2334,
+            "remaining": 447,
+            "inProgress": 76
+          },
+          {
+            "title": "WoInProgress",
+            "completed": 1887,
+            "total": 2334,
+            "remaining": 447,
+            "inProgress": 76
+          },
+          {
+            "title": "broken",
+            "completed": 1887,
+            "total": 2334,
+            "remaining": 447,
+            "inProgress": 76
+          },
+          {
+            "title": "criticality",
+            "completed": 1887,
+            "total": 2334,
+            "remaining": 447,
+            "inProgress": 76
+          }
+        ]
+      },
+      {
+        "code": "4",
+        "data": [
+          {
+            "title": "total",
+            "completed": 1887,
+            "total": 2334,
+            "remaining": 447,
+            "inProgress": 76
+          },
+          {
+            "title": "outOfStock",
+            "completed": 1887,
+            "total": 2334,
+            "remaining": 447,
+            "inProgress": 76
+          },
+          {
+            "title": "WoInProgress",
+            "completed": 1887,
+            "total": 2334,
+            "remaining": 447,
+            "inProgress": 76
+          },
+          {
+            "title": "broken",
+            "completed": 1887,
+            "total": 2334,
+            "remaining": 447,
+            "inProgress": 76
+          },
+          {
+            "title": "criticality",
+            "completed": 1887,
+            "total": 2334,
+            "remaining": 447,
+            "inProgress": 76
+          }
+        ]
+      },
+      {
+        "code": "5",
+        "data": [
+          {
+            "title": "total",
+            "completed": 1887,
+            "total": 2334,
+            "remaining": 447,
+            "inProgress": 76
+          },
+          {
+            "title": "outOfStock",
+            "completed": 1887,
+            "total": 2334,
+            "remaining": 447,
+            "inProgress": 76
+          },
+          {
+            "title": "WoInProgress",
+            "completed": 1887,
+            "total": 2334,
+            "remaining": 447,
+            "inProgress": 76
+          },
+          {
+            "title": "broken",
+            "completed": 1887,
+            "total": 2334,
+            "remaining": 447,
+            "inProgress": 76
+          },
+          {
+            "title": "criticality",
+            "completed": 1887,
+            "total": 2334,
+            "remaining": 447,
+            "inProgress": 76
+          }
+        ]
+      },
+      {
+        "code": "6",
+        "data": [
+          {
+            "title": "total",
+            "completed": 1887,
+            "total": 2334,
+            "remaining": 447,
+            "inProgress": 76
+          },
+          {
+            "title": "outOfStock",
+            "completed": 1887,
+            "total": 2334,
+            "remaining": 447,
+            "inProgress": 76
+          },
+          {
+            "title": "WoInProgress",
+            "completed": 1887,
+            "total": 2334,
+            "remaining": 447,
+            "inProgress": 76
+          },
+          {
+            "title": "broken",
+            "completed": 1887,
+            "total": 2334,
+            "remaining": 447,
+            "inProgress": 76
+          },
+          {
+            "title": "criticality",
+            "completed": 1887,
+            "total": 2334,
+            "remaining": 447,
+            "inProgress": 76
+          }
+        ]
+      },
+      {
+        "code": "7",
+        "data": [
+          {
+            "title": "total",
+            "completed": 1887,
+            "total": 2334,
+            "remaining": 447,
+            "inProgress": 76
+          },
+          {
+            "title": "outOfStock",
+            "completed": 1887,
+            "total": 2334,
+            "remaining": 447,
+            "inProgress": 76
+          },
+          {
+            "title": "WoInProgress",
+            "completed": 1887,
+            "total": 2334,
+            "remaining": 447,
+            "inProgress": 76
+          },
+          {
+            "title": "broken",
+            "completed": 1887,
+            "total": 2334,
+            "remaining": 447,
+            "inProgress": 76
+          },
+          {
+            "title": "criticality",
+            "completed": 1887,
+            "total": 2334,
+            "remaining": 447,
+            "inProgress": 76
+          }
+        ]
+      },
+      {
+        "code": "8",
+        "data": [
+          {
+            "title": "total",
+            "completed": 1887,
+            "total": 2334,
+            "remaining": 447,
+            "inProgress": 76
+          },
+          {
+            "title": "outOfStock",
+            "completed": 1887,
+            "total": 2334,
+            "remaining": 447,
+            "inProgress": 76
+          },
+          {
+            "title": "WoInProgress",
+            "completed": 1887,
+            "total": 2334,
+            "remaining": 447,
+            "inProgress": 76
+          },
+          {
+            "title": "broken",
+            "completed": 1887,
+            "total": 2334,
+            "remaining": 447,
+            "inProgress": 76
+          },
+          {
+            "title": "criticality",
+            "completed": 1887,
+            "total": 2334,
+            "remaining": 447,
+            "inProgress": 76
+          }
+        ]
+      }
+    ]
+  },
+
+  {
+    "branch": "999"
+  }
+]

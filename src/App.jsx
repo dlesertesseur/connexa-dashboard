@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { MantineProvider, ColorSchemeProvider } from "@mantine/core";
-import { useMantineTheme } from "@mantine/core";
-import { BrowserRouter, Route, Router, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import AppFrame from "./components/AppFrame";
+import "./i18n";
 
 function App() {
   const [colorScheme, setColorScheme] = useState("light");

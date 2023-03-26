@@ -1,0 +1,422 @@
+[
+  {
+    "id": 40534,
+    "sku": "59886",
+    "description": "ALFAJOR NEGRITO FANTOCHE PAQ 125 GRM",
+    "department": "ALMACEN",
+    "family": "GOLOSINAS"
+  },
+  {
+    "id": 40535,
+    "sku": "59889",
+    "description": "ALFAJOR NIEVE FANTOCHE PAQ 125 GRM",
+    "department": "ALMACEN",
+    "family": "GOLOSINAS"
+  },
+  {
+    "id": 40536,
+    "sku": "57812",
+    "description": "PERAS E/MITADE BALLARINI LAT 820 GRM",
+    "department": "ALMACEN",
+    "family": "CONS.FRUTA"
+  },
+  {
+    "id": 40537,
+    "sku": "59903",
+    "description": "VINO F.ROSAD . PEQUENA V BOT 1,5 LTR",
+    "department": "BEBIDAS C/ALCOHOL",
+    "family": "VINOS FINOS ROSADOS"
+  },
+  {
+    "id": 40538,
+    "sku": "59904",
+    "description": "VINO F.ROSAD . PEQUENA V BOT 750 CMQ",
+    "department": "BEBIDAS C/ALCOHOL",
+    "family": "VINOS FINOS ROSADOS"
+  },
+  {
+    "id": 40539,
+    "sku": "57999",
+    "description": "PURE MANZANA LIGHT CANALE FRA 510 GRM",
+    "department": "ALMACEN",
+    "family": "CONS.FRUTA"
+  },
+  {
+    "id": 40540,
+    "sku": "59920",
+    "description": "FID.NIDO SEM ESPINACA CANALE PAQ 500 GRM",
+    "department": "ALMACEN",
+    "family": "FIDEOS"
+  },
+  {
+    "id": 40541,
+    "sku": "59923",
+    "description": "MERMELADA CIRUELA VALSOLE POT 250 GRM",
+    "department": "ALMACEN",
+    "family": "MERMELADAS"
+  },
+  {
+    "id": 40542,
+    "sku": "59922",
+    "description": "MERMELADA DURAZNO VALSOLE POT 250 GRM",
+    "department": "ALMACEN",
+    "family": "MERMELADAS"
+  },
+  {
+    "id": 40543,
+    "sku": "59921",
+    "description": "MERMELADA DAMASCO VALSOLE POT 250 GRM",
+    "department": "ALMACEN",
+    "family": "MERMELADAS"
+  },
+  {
+    "id": 40544,
+    "sku": "50014",
+    "description": "AGUA SIN GAS MINERAL VILLAVIC. PET 500 CMQ",
+    "department": "BEBIDAS SIN ALCOHOL",
+    "family": "AGUA MINERAL Y SODAS"
+  },
+  {
+    "id": 40545,
+    "sku": "59958",
+    "description": "VINO CAB.SAU . COMTE BOR BOT 750 CMQ",
+    "department": "BEBIDAS C/ALCOHOL",
+    "family": "VINOS FINOS TINTOS"
+  },
+  {
+    "id": 40546,
+    "sku": "59959",
+    "description": "VINO MALBEC . COMTE BOR BOT 750 CMQ",
+    "department": "BEBIDAS C/ALCOHOL",
+    "family": "VINOS FINOS TINTOS"
+  },
+  {
+    "id": 40547,
+    "sku": "59960",
+    "description": "VINO MERLOT . COMTE BOR BOT 750 CMQ",
+    "department": "BEBIDAS C/ALCOHOL",
+    "family": "VINOS FINOS TINTOS"
+  },
+  {
+    "id": 40548,
+    "sku": "59961",
+    "description": "VINO SYRAH . COMTE BORBO BOT 750 CMQ",
+    "department": "BEBIDAS C/ALCOHOL",
+    "family": "VINOS FINOS TINTOS"
+  },
+  {
+    "id": 40549,
+    "sku": "59962",
+    "description": "VINO CHARDON . COMTE BOR BOT 750 CMQ",
+    "department": "BEBIDAS C/ALCOHOL",
+    "family": "VINOS FINOS BLANCOS"
+  },
+  {
+    "id": 40550,
+    "sku": "59942",
+    "description": "VINO F.TINTO RESERVA SIMONASSI BOT 750 CMQ",
+    "department": "BEBIDAS C/ALCOHOL",
+    "family": "VINOS FINOS TINTOS"
+  },
+  {
+    "id": 40551,
+    "sku": "59941",
+    "description": "VINO MALBEC . SIMONASSI BOT 750 CMQ",
+    "department": "BEBIDAS C/ALCOHOL",
+    "family": "VINOS FINOS TINTOS"
+  },
+  {
+    "id": 40552,
+    "sku": "59940",
+    "description": "VINO BARBERA . SIMONASSI BOT 750 CMQ",
+    "department": "BEBIDAS C/ALCOHOL",
+    "family": "VINOS FINOS TINTOS"
+  },
+  {
+    "id": 40553,
+    "sku": "59938",
+    "description": "APER.HIERBAS . HIER.QUIN BOT 920 CMQ",
+    "department": "BEBIDAS C/ALCOHOL",
+    "family": "APERITIVO"
+  },
+  {
+    "id": 40554,
+    "sku": "59931",
+    "description": "CHAMPAÑA HELAD.LIMON FEDER.DE AL BOT 750 CMQ",
+    "department": "BEBIDAS C/ALCOHOL",
+    "family": "CHAMPAGNE"
+  },
+  {
+    "id": 40555,
+    "sku": "59939",
+    "description": "VINO BONARDA MALBEC CASA CUBAS BOT 750 CMQ",
+    "department": "BEBIDAS C/ALCOHOL",
+    "family": "VINOS FINOS TINTOS"
+  },
+  {
+    "id": 40556,
+    "sku": "59976",
+    "description": "AGUA CON GAS MINERAL ECO D.LOS BOT 500 CMQ",
+    "department": "BEBIDAS SIN ALCOHOL",
+    "family": "AGUA MINERAL Y SODAS"
+  },
+  {
+    "id": 40557,
+    "sku": "59975",
+    "description": "AGUA SIN GAS MINERAL ECO D.LOS BOT 500 CMQ",
+    "department": "BEBIDAS SIN ALCOHOL",
+    "family": "AGUA MINERAL Y SODAS"
+  },
+  {
+    "id": 40558,
+    "sku": "59978",
+    "description": "AGUA CON GAS MINERAL ECO D.LOS PET 500 CMQ",
+    "department": "BEBIDAS SIN ALCOHOL",
+    "family": "AGUA MINERAL Y SODAS"
+  },
+  {
+    "id": 40559,
+    "sku": "59977",
+    "description": "AGUA SIN GAS MINERAL ECO D.LOS PET 500 CMQ",
+    "department": "BEBIDAS SIN ALCOHOL",
+    "family": "AGUA MINERAL Y SODAS"
+  },
+  {
+    "id": 40560,
+    "sku": "2203",
+    "description": "VINO . SANTA ISABE BOT 700 CMQ",
+    "department": "BEBIDAS C/ALCOHOL",
+    "family": "VINOS FINOS TINTOS"
+  },
+  {
+    "id": 40561,
+    "sku": "2204",
+    "description": "VINO MALBEC . SANTA ISABE BOT 750 CMQ",
+    "department": "BEBIDAS C/ALCOHOL",
+    "family": "VINOS FINOS TINTOS"
+  },
+  {
+    "id": 40562,
+    "sku": "59714",
+    "description": "SH. ALGA + SAVIA PLUSBELLE PAK 2 UNI",
+    "department": "PERFUMERIA",
+    "family": "SHAMPOO"
+  },
+  {
+    "id": 40563,
+    "sku": "59716",
+    "description": "SH. ROSA + SAVIA PLUSBELLE PAK 2 UNI",
+    "department": "PERFUMERIA",
+    "family": "SHAMPOO"
+  },
+  {
+    "id": 40564,
+    "sku": "59717",
+    "description": "SHAMPO.DIARI MANZ + S PLUSBELLE PAK 2 UNI",
+    "department": "PERFUMERIA",
+    "family": "SHAMPOO"
+  },
+  {
+    "id": 40565,
+    "sku": "59718",
+    "description": "SH. HENNA + SAVIA PLUSBELLE PAK 2 UNI",
+    "department": "PERFUMERIA",
+    "family": "SHAMPOO"
+  },
+  {
+    "id": 40566,
+    "sku": "59719",
+    "description": "SHAMPO.SECOS CREM+SAV PLUSBELLE PAK 2 UNI",
+    "department": "PERFUMERIA",
+    "family": "SHAMPOO"
+  },
+  {
+    "id": 40567,
+    "sku": "59937",
+    "description": "PURE TOMATE . BALLARINI TTB 530 GRM",
+    "department": "ALMACEN",
+    "family": "LINEA ROJA"
+  },
+  {
+    "id": 40568,
+    "sku": "59929",
+    "description": "GARBANZOS SEC.REMO INCA LAT 425 GRM",
+    "department": "ALMACEN",
+    "family": "CONS.VEGETAL"
+  },
+  {
+    "id": 40569,
+    "sku": "59928",
+    "description": "ESPARRAGO VERDES YORNET FRA 400 GRM",
+    "department": "ALMACEN",
+    "family": "CONS.VEGETAL"
+  },
+  {
+    "id": 40570,
+    "sku": "59515",
+    "description": "AZUCAR GOLD RUB LA GRINGA BOL 908 GRM",
+    "department": "ALMACEN",
+    "family": "AZUCAR / EDULCORANTES"
+  },
+  {
+    "id": 40571,
+    "sku": "58911",
+    "description": "ANCHOA E/ACEITE PENNISI FRA 170 GRM",
+    "department": "ALMACEN",
+    "family": "CONS.PESCADO"
+  },
+  {
+    "id": 40572,
+    "sku": "59957",
+    "description": "YERBA MATE C/PAL2X1 MONTE LOS PAK 2 UNI",
+    "department": "ALMACEN",
+    "family": "INFUSION YERBA"
+  },
+  {
+    "id": 40573,
+    "sku": "59895",
+    "description": "ESPUMA AF. SENSIBLE NIVEA AER 200 ML",
+    "department": "PERFUMERIA",
+    "family": "ELEMENTOS DE AFEITAR"
+  },
+  {
+    "id": 40574,
+    "sku": "59896",
+    "description": "EMULS.CORPOR PIEL SEC NIVEA BOD BOT 250 ML",
+    "department": "PERFUMERIA",
+    "family": "CREMA DE BELLEZA"
+  },
+  {
+    "id": 40575,
+    "sku": "59881",
+    "description": "CER.ZUCARITA +F.L.+BOWL KELLOGG-S EST 530 GRM",
+    "department": "ALMACEN",
+    "family": "CEREALES"
+  },
+  {
+    "id": 40576,
+    "sku": "59993",
+    "description": "MAYONESA . FANACOA FRA 500 GRM",
+    "department": "ALMACEN",
+    "family": "CONDIMENTOS"
+  },
+  {
+    "id": 40577,
+    "sku": "21292",
+    "description": "CHIMICHURRI POLVO POO SOB 25 GRM",
+    "department": "ALMACEN",
+    "family": "CONDIMENTOS"
+  },
+  {
+    "id": 40578,
+    "sku": "33157",
+    "description": "ACETO BALSAMIC OMEGA BOT 500 CMQ",
+    "department": "ALMACEN",
+    "family": "CONDIMENTOS"
+  },
+  {
+    "id": 40579,
+    "sku": "51624",
+    "description": "ACETO BALSAMIC DEL VERDE BOT 500 GRM",
+    "department": "ALMACEN",
+    "family": "CONDIMENTOS"
+  },
+  {
+    "id": 40580,
+    "sku": "10807",
+    "description": "ADEREZO LIGHT NEWMAN FRA 237 GRM",
+    "department": "ALMACEN",
+    "family": "CONDIMENTOS"
+  },
+  {
+    "id": 40581,
+    "sku": "11939",
+    "description": "SALSA ESPEC. INGLESA DARAMA FRA 180 CMQ",
+    "department": "ALMACEN",
+    "family": "CONDIMENTOS"
+  },
+  {
+    "id": 40582,
+    "sku": "2113",
+    "description": "SALSA ESPEC. SOJA POO FRA 250 GRM",
+    "department": "ALMACEN",
+    "family": "CONDIMENTOS"
+  },
+  {
+    "id": 40583,
+    "sku": "11938",
+    "description": "SALSA ESPEC. SOJA DARAMA FRA 180 GRM",
+    "department": "ALMACEN",
+    "family": "CONDIMENTOS"
+  },
+  {
+    "id": 40584,
+    "sku": "12805",
+    "description": "SALSA ESPEC. PESTO DARAMA FRA 227 GRM",
+    "department": "ALMACEN",
+    "family": "CONDIMENTOS"
+  },
+  {
+    "id": 40585,
+    "sku": "12815",
+    "description": "SALSA ESPEC. BASE/AJO DARAMA FRA 180 CMQ",
+    "department": "ALMACEN",
+    "family": "CONDIMENTOS"
+  },
+  {
+    "id": 40586,
+    "sku": "13673",
+    "description": "SALSA ESPEC. BLANCA POO SOB 50 GRM",
+    "department": "ALMACEN",
+    "family": "CONDIMENTOS"
+  },
+  {
+    "id": 40587,
+    "sku": "10811",
+    "description": "SALSA ESPEC. C/ESPECI NEWMAN FRA 737 GRM",
+    "department": "ALMACEN",
+    "family": "CONDIMENTOS"
+  },
+  {
+    "id": 40588,
+    "sku": "10809",
+    "description": "SALSA ESPEC. C/HONGOS NEWMAN FRA 737 GRM",
+    "department": "ALMACEN",
+    "family": "CONDIMENTOS"
+  },
+  {
+    "id": 40589,
+    "sku": "10972",
+    "description": "SALSA ESPEC. CHAMPIGN POO SOB 30 GRM",
+    "department": "ALMACEN",
+    "family": "CONDIMENTOS"
+  },
+  {
+    "id": 40590,
+    "sku": "11940",
+    "description": "SALSA ESPEC. HONGOS DARAMA FRA 180 GRM",
+    "department": "ALMACEN",
+    "family": "CONDIMENTOS"
+  },
+  {
+    "id": 40591,
+    "sku": "10813",
+    "description": "SALSA ESPEC. SUAVE NEWMAN FRA 311 GRM",
+    "department": "ALMACEN",
+    "family": "CONDIMENTOS"
+  },
+  {
+    "id": 40592,
+    "sku": "10961",
+    "description": "SALSA ESPEC. TUCO POO SOB 30 GRM",
+    "department": "ALMACEN",
+    "family": "CONDIMENTOS"
+  },
+  {
+    "id": 40593,
+    "sku": "32715",
+    "description": "VINAGRE ALCOHOL OMEGA BOT 500 CMQ",
+    "department": "ALMACEN",
+    "family": "CONDIMENTOS"
+  }
+]

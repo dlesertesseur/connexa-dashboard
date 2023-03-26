@@ -1,10 +1,12 @@
-import { Group } from "@mantine/core";
+import { Group, Text } from "@mantine/core";
 import React from "react";
 
 const CustomFooter = () => {
   return (
-    <Group position="left">
-      <h3>CustomFooter</h3>
+    <Group grow> 
+      <Text color="dimmed" size="sm" m={"xs"}>
+        © 2022 zeetrex All rights reserved.
+      </Text>
     </Group>
   );
 };

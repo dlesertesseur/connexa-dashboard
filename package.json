@@ -17,9 +17,16 @@
     "@mantine/notifications": "^6.0.4",
     "@tabler/icons-react": "^2.11.0",
     "embla-carousel-react": "^7.1.0",
+    "i18next": "^22.4.13",
+    "i18next-browser-languagedetector": "^7.0.1",
+    "i18next-http-backend": "^2.2.0",
     "react": "^18.2.0",
+    "react-data-table-component": "^7.5.3",
     "react-dom": "^18.2.0",
-    "react-router-dom": "^6.9.0"
+    "react-i18next": "^12.2.0",
+    "react-responsive-masonry": "^2.1.7",
+    "react-router-dom": "^6.9.0",
+    "styled-components": "^5.3.9"
   },
   "devDependencies": {
     "@types/react": "^18.0.28",

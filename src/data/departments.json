@@ -1,0 +1,11 @@
+[
+  { "value": "0", "label": "TODOS"},
+  { "value": "1", "label": "ALMACEN" },
+  { "value": "2", "label": "BEBIDAS CON ALCOHOL"},
+  { "value": "3", "label": "BEBIDAS SIN ALCOHOL"},
+  { "value": "4", "label": "PERFUMERIA"},
+  { "value": "5", "label": "LIMPIEZA"},
+  { "value": "6", "label": "PANADERIA"},
+  { "value": "7", "label": "ELECTRODOMESTICOS"},
+  { "value": "8", "label": "MASCOTAS"}
+]

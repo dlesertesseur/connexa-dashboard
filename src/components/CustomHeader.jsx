@@ -4,7 +4,8 @@ import React from "react";
 const CustomHeader = () => {
   return (
     <Group position="left" grow>
-      <Image maw={240} src="./connexa_logo.png" alt="logo" />
+      <Image maw={240} src={"/connexa_logo.png"} alt="logo" />
+
     </Group>
   );
 };

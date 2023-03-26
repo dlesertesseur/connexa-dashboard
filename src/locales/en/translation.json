@@ -1,0 +1,15 @@
+{
+  "stats":{
+    "total":"Total SKU",
+    "outOfStock":"Out of Stock",
+    "WoInProgress":"WO in progress",
+    "broken":"Broken",
+    "criticality":"Criticality\n(90% - 99%)"
+  },
+  "statsRing": {
+    "remaining": "Remaining",
+    "inProgress": "In Progress",
+    "completed": "Completed",
+    "total": "Total"
+  }
+}
