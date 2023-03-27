@@ -5,6 +5,8 @@ import {
   RingProgress,
   Group,
   UnstyledButton,
+  SimpleGrid,
+  Stack,
 } from "@mantine/core";
 import { useTranslation } from "react-i18next";
 
@@ -14,58 +16,64 @@ export default function StatsRingCard({
   total = 100,
   stats = [],
   color = "blue",
-  onPress
+  onPress,
 }) {
   const { t } = useTranslation();
   const { classes, theme } = useStyles();
+
   const items = stats.map((stat) => (
     <div key={stat.label}>
-      <Text className={classes.label}>{stat.value}</Text>
-      <Text size="xs" color="dimmed">
-        {stat.label}
-      </Text>
+      <Stack spacing={0} >
+        <Text className={classes.label}>{stat.value}</Text>
+        <Text size="xs" color="dimmed">
+          {stat.label}
+        </Text>
+      </Stack>
     </div>
   ));
 
   return (
     <UnstyledButton onClick={onPress} disabled={onPress ? false : true}>
-      <Card withBorder p="xl" radius="md" className={classes.card}>
-        <div className={classes.inner}>
-          <div>
-            <Text fz="xl" className={classes.label}>
-              {title}
-            </Text>
-
-            <Group mt="lg">
-              <div>
-                <Text className={classes.lead} mt={30}>
-                  {total}
-                </Text>
+      <Card withBorder p="xs" radius="md" className={classes.card}>
+        <Group>
+          <Text fz="xl" className={classes.label}>
+            {title}
+          </Text>
+        </Group>
+        <SimpleGrid
+          className={classes.inner}
+          cols={2}
+          spacing="lg"
+          breakpoints={[{ minWidth: "lg", cols: 1, spacing: "sm" }]}
+        >
+          <Stack spacing={"xs"} justify={"center"}>
+            <Group mt="xs">
+              <Stack spacing={0}>
+                <Text className={classes.lead}>{total}</Text>
                 <Text fz="xs" color="dimmed">
                   {t("statsRing.total")}
                 </Text>
-              </div>
-              <div>
-                <Text className={classes.lead} mt={30}>
-                  {completed}
-                </Text>
+              </Stack>
+              <Stack spacing={0}>
+                <Text className={classes.lead}>{completed}</Text>
                 <Text fz="xs" color="dimmed">
                   {t("statsRing.completed")}
                 </Text>
-              </div>
+              </Stack>
             </Group>
 
-            <Group mt="lg">{items}</Group>
-          </div>
+            <Group mt="xs">{items}</Group>
+          </Stack>
 
-          <div className={classes.ring}>
+          <Stack
+            spacing={"xs"}
+            sx={{ justifyContent: "center", alignItems: "center" }}
+          >
             <RingProgress
               roundCaps
               thickness={6}
               size={150}
-              sections={[
-                { value: (completed / total) * 100, color: color },
-              ]}
+              sections={[{ value: (completed / total) * 100, color: color }]}
               label={
                 <div>
                   <Text ta="center" fz="lg" className={classes.label}>
@@ -74,8 +82,8 @@ export default function StatsRingCard({
                 </div>
               }
             />
-          </div>
-        </div>
+          </Stack>
+        </SimpleGrid>
       </Card>
     </UnstyledButton>
   );
@@ -102,14 +110,13 @@ const useStyles = createStyles((theme) => ({
 
   inner: {
     display: "flex",
-
+    justifyContent: "space-between",
     [theme.fn.smallerThan("xs")]: {
       flexDirection: "column",
     },
   },
 
   ring: {
-    flex: 1,
     display: "flex",
     justifyContent: "flex-end",
 

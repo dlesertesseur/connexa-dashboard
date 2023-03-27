@@ -47,10 +47,40 @@
         "data": [
           {
             "title": "total",
-            "completed": 1887,
-            "total": 2334,
-            "remaining": 447,
-            "inProgress": 76
+            "completed": 365,
+            "total": 512,
+            "remaining": 156,
+            "inProgress": 129,
+            "products": [
+              {
+                "id": 40534,
+                "sku": "59886",
+                "description": "ALFAJOR NEGRITO FANTOCHE PAQ 125 GRM",
+                "department": "ALMACEN",
+                "family": "GOLOSINAS"
+              },
+              {
+                "id": 40535,
+                "sku": "59889",
+                "description": "ALFAJOR NIEVE FANTOCHE PAQ 125 GRM",
+                "department": "ALMACEN",
+                "family": "GOLOSINAS"
+              },
+              {
+                "id": 40536,
+                "sku": "57812",
+                "description": "PERAS E/MITADE BALLARINI LAT 820 GRM",
+                "department": "ALMACEN",
+                "family": "CONS.FRUTA"
+              },
+              {
+                "id": 40537,
+                "sku": "59903",
+                "description": "VINO F.ROSAD . PEQUENA V BOT 1,5 LTR",
+                "department": "BEBIDAS C/ALCOHOL",
+                "family": "VINOS FINOS ROSADOS"
+              }
+            ]
           },
           {
             "title": "outOfStock",

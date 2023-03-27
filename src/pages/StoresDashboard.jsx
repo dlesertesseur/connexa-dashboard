@@ -17,14 +17,12 @@ const StoresDashboard = () => {
   useEffect(() => {
     const params = { branch: selectedBranch, department: selectedDepartment };
     getData(params).then((ret) => {
-      // console.log("StoresDashboard -> useEffect()", ret);
       setData(ret);
     });
   }, [selectedBranch, selectedDepartment]);
 
   useEffect(() => {
     const colorIndex = parseInt(selectedDepartment);
-    // console.log("CustomNavbar -> useEffect() -> colorindex", colorIndex);
     setDepartmentColor(departmentsColors[colorIndex]);
   }, [selectedDepartment]);
 
@@ -34,8 +32,9 @@ const StoresDashboard = () => {
         <StatsRingCard
           key={index}
           color={departmentColor}
+          disable = {data?.products ? false : true}
           onPress={() => {
-            navigate("/stores/detail");
+            navigate("/stores/detail", { state: {indicator:index} });
           }}
           title={t("stats." + stats.title)}
           completed={stats.completed}
@@ -61,7 +60,7 @@ const StoresDashboard = () => {
   };
 
   return data ? (
-    <ResponsiveMasonry columnsCountBreakPoints={{ 350: 1, 750: 2, 900: 3 }}>
+    <ResponsiveMasonry columnsCountBreakPoints={{ 350: 1, 850: 2, 1200: 3 }}>
       <Masonry gutter={"10px"} columnsCount={3}>
         {createStats()}
       </Masonry>

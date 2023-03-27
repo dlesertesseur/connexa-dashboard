@@ -1,9 +1,9 @@
-import React, { useEffect, useRef, useState } from "react";
-import { Button, Group, Paper, Stack, Table, Text } from "@mantine/core";
+import React, { useEffect, useState } from "react";
+import DataTable from "react-data-table-component";
+import { Button, Group, Paper, Stack, Text } from "@mantine/core";
 import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
 import { getNotExhibitedItems } from "../data/DashboardDao";
-import DataTable from "react-data-table-component";
 
 const NotExhibited = () => {
 
@@ -53,20 +53,17 @@ const NotExhibited = () => {
       <Stack>
         {items ? (
           <DataTable
-            title={"Productos sin exhibicion en gondola"}
+            title={t("page.notExhibited.title")}
             columns={columns}
             data={items}
             fixedHeader
             dense
             highlightOnHover
-            // selectableRows
-            // selectableRowsHighlight
-            // selectableRowsSingle
             fixedHeaderScrollHeight={parentHeight}
           />
         ) : null}
 
-        <Group position="right">
+        <Group position="right" p={"xs"}>
           <Button
             onClick={() => {
               navigate(-1);

@@ -1,4 +1,12 @@
 {
+  "page":{
+    "notExhibited":{
+      "title":"Productos sin exhibicion en gondola"
+    },
+    "datail-outOfStock":{
+      "title":"Productos sin stock en sucursal"
+    }
+  },
   "notExhibited": {
     "columns": ["SKU", "Descripcion", "Departanento", "Familia"]
   },
@@ -16,7 +24,7 @@
     "replacement": "Reposición"
   },
   "stats": {
-    "total": "Referencias (SKU)",
+    "total": "Productos surtido vs total cadena",
     "outOfStock": "Sin stock",
     "WoInProgress": "OTs en curso",
     "broken": "Quebrados",

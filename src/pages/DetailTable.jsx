@@ -1,47 +1,81 @@
-import { Button, Group, Paper, Stack, Table, Text } from "@mantine/core";
-import React from "react";
+import React, { useContext, useEffect, useState } from "react";
+import DataTable from "react-data-table-component";
+import { Button, Group, Paper, Stack, Text } from "@mantine/core";
 import { useTranslation } from "react-i18next";
-import { useNavigate } from "react-router-dom";
-
-
-const elements = [
-  { position: 6, mass: 12.011, symbol: "C", name: "Carbon" },
-  { position: 7, mass: 14.007, symbol: "N", name: "Nitrogen" },
-  { position: 39, mass: 88.906, symbol: "Y", name: "Yttrium" },
-  { position: 56, mass: 137.33, symbol: "Ba", name: "Barium" },
-  { position: 58, mass: 140.12, symbol: "Ce", name: "Cerium" },
-];
+import { useLocation, useNavigate } from "react-router-dom";
+import { getDetail } from "../data/DashboardDao";
+import { AppStateContext } from "../context/AppStateContext";
 
 const DetailTable = () => {
+  const [items, setItems] = useState([]);
+  const { selectedBranch, selectedDepartment } = useContext(AppStateContext);
+  
+  const { state } = useLocation();
+  const { indicator } = state;
+
+  const [parentHeight, setParentHeight] = useState(
+    window.innerHeight - 300 + "px"
+  );
+
+  useEffect(() => {
+    const params = { branch: selectedBranch, department: selectedDepartment, indicator:indicator };
+    getDetail(params).then((ret) => {
+      setItems(ret);
+    });
+  }, [selectedBranch, selectedDepartment]);
 
   const navigate = useNavigate();
   const { t } = useTranslation();
 
-  const rows = elements.map((element) => (
-    <tr key={element.name}>
-      <td>{element.position}</td>
-      <td>{element.name}</td>
-      <td>{element.symbol}</td>
-      <td>{element.mass}</td>
-    </tr>
-  ));
+  const cols = t("notExhibited.columns", { returnObjects: true });
+
+  const columns = [
+    {
+      name: cols[0],
+      selector: (row) => row.sku,
+      sortable: true,
+      width: "100px",
+    },
+    {
+      name: cols[1],
+      selector: (row) => row.description,
+      sortable: true,
+    },
+    {
+      name: cols[2],
+      selector: (row) => row.department,
+      sortable: true,
+      width: "200px",
+    },
+    {
+      name: cols[3],
+      selector: (row) => row.family,
+      sortable: true,
+      width: "200px",
+    },
+  ];
 
   return (
     <Paper>
       <Stack>
-        <Table>
-          <thead>
-            <tr>
-              <th>Element position</th>
-              <th>Element name</th>
-              <th>Symbol</th>
-              <th>Atomic mass</th>
-            </tr>
-          </thead>
-          <tbody>{rows}</tbody>
-        </Table>
-        <Group  position="right">
-          <Button onClick={() => {navigate(-1)}}>
+        {items ? (
+          <DataTable
+            title={t("page.datail-outOfStock.title")}
+            columns={columns}
+            data={items}
+            fixedHeader
+            dense
+            highlightOnHover
+            fixedHeaderScrollHeight={parentHeight}
+          />
+        ) : null}
+
+        <Group position="right" p={"xs"}>
+          <Button
+            onClick={() => {
+              navigate(-1);
+            }}
+          >
             <Text>{t("button.back")}</Text>
           </Button>
         </Group>

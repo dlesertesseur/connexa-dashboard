@@ -23,6 +23,8 @@ const CustomNavbar = () => {
     setSelectedBranch,
     selectedDepartment,
     setSelectedDepartment,
+    opened,
+    setOpened,
   } = useContext(AppStateContext);
 
   const [branches, setBranches] = useState(null);
@@ -59,7 +61,10 @@ const CustomNavbar = () => {
           label={t("label.branches")}
           placeholder={t("label.selectItem")}
           value={selectedBranch}
-          onChange={setSelectedBranch}
+          onChange={(e) => {
+            //setSelectedBranch(e);
+            setOpened(false);
+          }}
           data={branches ? branches : []}
           disabled={branches ? false : true}
         />
@@ -84,7 +89,10 @@ const CustomNavbar = () => {
           data={departments ? departments : []}
           disabled={departments ? false : true}
           value={selectedDepartment}
-          onChange={setSelectedDepartment}
+          onChange={(e) => {
+            setSelectedDepartment(e);
+            setOpened(false);
+          }}
         />
       </Stack>
     );
@@ -108,6 +116,9 @@ const CustomNavbar = () => {
             <Group grow>
               <Button
                 onClick={() => {
+                  if (opened) {
+                    setOpened(false);
+                  }
                   navigate("/notExhibited");
                 }}
               >

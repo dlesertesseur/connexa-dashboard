@@ -47,7 +47,7 @@ const AppFrame = () => {
             p="md"
             hiddenBreakpoint="sm"
             hidden={!opened}
-            width={{ sm: 200, lg: 250 }}
+            width={{ sm: 250, lg: 300 }}
           >
             <CustomNavbar />
           </Navbar>
