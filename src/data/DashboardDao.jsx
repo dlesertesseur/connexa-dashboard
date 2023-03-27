@@ -21,7 +21,11 @@ async function getData(parameters) {
     //     return s;
     //   });
 
-    const branch = data[parameters.branch];
+    const found = data.find((item) => {
+      return(item.branch === parameters.branch)
+    })
+
+    const branch = found ? found : data[parameters.branch];
     const depto = branch.departmentData[parameters.department]
 
     return depto.data;

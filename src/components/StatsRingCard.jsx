@@ -17,6 +17,7 @@ export default function StatsRingCard({
   stats = [],
   color = "blue",
   onPress,
+  disabled=true
 }) {
   const { t } = useTranslation();
   const { classes, theme } = useStyles();
@@ -33,7 +34,7 @@ export default function StatsRingCard({
   ));
 
   return (
-    <UnstyledButton onClick={onPress} disabled={onPress ? false : true}>
+    <UnstyledButton onClick={onPress} disabled={disabled}>
       <Card withBorder p="xs" radius="md" className={classes.card}>
         <Group>
           <Text fz="xl" className={classes.label}>
@@ -77,7 +78,7 @@ export default function StatsRingCard({
               label={
                 <div>
                   <Text ta="center" fz="lg" className={classes.label}>
-                    {((completed / total) * 100).toFixed(0)}%
+                    {((completed / total) * 100).toFixed(1)}%
                   </Text>
                 </div>
               }

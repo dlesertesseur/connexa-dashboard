@@ -12,7 +12,6 @@ const NotExhibited = () => {
 
   useEffect(() => {
     getNotExhibitedItems().then((ret) => {
-      console.log(ret);
       setItems(ret);
     });
   }, []);

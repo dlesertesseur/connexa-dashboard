@@ -6,6 +6,5 @@
   { "value": "4", "label": "PERFUMERIA"},
   { "value": "5", "label": "LIMPIEZA"},
   { "value": "6", "label": "PANADERIA"},
-  { "value": "7", "label": "ELECTRODOMESTICOS"},
-  { "value": "8", "label": "MASCOTAS"}
+  { "value": "7", "label": "MASCOTAS"}
 ]

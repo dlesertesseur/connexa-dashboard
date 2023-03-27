@@ -62,7 +62,7 @@ const CustomNavbar = () => {
           placeholder={t("label.selectItem")}
           value={selectedBranch}
           onChange={(e) => {
-            //setSelectedBranch(e);
+            setSelectedBranch(e);
             setOpened(false);
           }}
           data={branches ? branches : []}

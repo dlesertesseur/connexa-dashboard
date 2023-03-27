@@ -24,7 +24,7 @@
     "replacement": "Reposición"
   },
   "stats": {
-    "total": "Productos surtido vs total cadena",
+    "total": "Referencias en surtido Vs Total cadena",
     "outOfStock": "Sin stock",
     "WoInProgress": "OTs en curso",
     "broken": "Quebrados",
@@ -33,7 +33,7 @@
   "statsRing": {
     "remaining": "Pendientes",
     "inProgress": "En ejecucion",
-    "completed": "Completados",
+    "completed": "Valor",
     "total": "Total"
   }
 }

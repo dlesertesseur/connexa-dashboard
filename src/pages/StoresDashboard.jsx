@@ -32,9 +32,9 @@ const StoresDashboard = () => {
         <StatsRingCard
           key={index}
           color={departmentColor}
-          disable = {data?.products ? false : true}
+          disabled = {data[index]?.products ? false : true}
           onPress={() => {
-            navigate("/stores/detail", { state: {indicator:index} });
+            navigate("/stores/detail", { state: {title:t("stats." + stats.title), indicator:index} });
           }}
           title={t("stats." + stats.title)}
           completed={stats.completed}

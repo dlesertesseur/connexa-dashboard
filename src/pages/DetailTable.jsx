@@ -11,7 +11,7 @@ const DetailTable = () => {
   const { selectedBranch, selectedDepartment } = useContext(AppStateContext);
   
   const { state } = useLocation();
-  const { indicator } = state;
+  const { title, indicator } = state;
 
   const [parentHeight, setParentHeight] = useState(
     window.innerHeight - 300 + "px"
@@ -60,7 +60,7 @@ const DetailTable = () => {
       <Stack>
         {items ? (
           <DataTable
-            title={t("page.datail-outOfStock.title")}
+            title={title}
             columns={columns}
             data={items}
             fixedHeader
