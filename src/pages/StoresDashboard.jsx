@@ -37,6 +37,7 @@ const StoresDashboard = () => {
             navigate("/stores/detail", { state: {title:t("stats." + stats.title), indicator:index} });
           }}
           title={t("stats." + stats.title)}
+          unit={stats.unit}
           completed={stats.completed}
           total={stats.total}
           stats={

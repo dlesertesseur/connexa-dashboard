@@ -1,38 +1,24 @@
 import React, { useContext, useEffect, useState } from "react";
-import {
-  Button,
-  Group,
-  Navbar,
-  Select,
-  Stack,
-  Text,
-  useMantineTheme,
-} from "@mantine/core";
+import { Button, Group, Navbar, Select, Stack, Text, useMantineTheme } from "@mantine/core";
 import { Accordion } from "@mantine/core";
 import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { getBranches, getDepartments } from "../data/DashboardDao";
 import { AppStateContext } from "../context/AppStateContext";
+import { IconBuilding } from "@tabler/icons-react";
 
 const CustomNavbar = () => {
   const navigate = useNavigate();
   const { t } = useTranslation();
 
-  const {
-    selectedBranch,
-    setSelectedBranch,
-    selectedDepartment,
-    setSelectedDepartment,
-    opened,
-    setOpened,
-  } = useContext(AppStateContext);
+  const { selectedBranch, setSelectedBranch, selectedDepartment, setSelectedDepartment, opened, setOpened } =
+    useContext(AppStateContext);
 
   const [branches, setBranches] = useState(null);
   const [departments, setDepartments] = useState(null);
   const theme = useMantineTheme();
 
-  const getColor = (color) =>
-    theme.colors[color][theme.colorScheme === "dark" ? 5 : 7];
+  const getColor = (color) => theme.colors[color][theme.colorScheme === "dark" ? 5 : 7];
 
   useEffect(() => {
     getBranches().then((ret) => {
@@ -50,10 +36,7 @@ const CustomNavbar = () => {
     return (
       <Stack
         sx={(theme) => ({
-          backgroundColor:
-            theme.colorScheme === "dark"
-              ? theme.colors.dark[8]
-              : theme.colors.gray[0],
+          backgroundColor: theme.colorScheme === "dark" ? theme.colors.dark[8] : theme.colors.gray[0],
         })}
       >
         <Select
@@ -76,10 +59,7 @@ const CustomNavbar = () => {
     return (
       <Stack
         sx={(theme) => ({
-          backgroundColor:
-            theme.colorScheme === "dark"
-              ? theme.colors.dark[8]
-              : theme.colors.gray[0],
+          backgroundColor: theme.colorScheme === "dark" ? theme.colors.dark[8] : theme.colors.gray[0],
         })}
       >
         <Select
@@ -126,6 +106,17 @@ const CustomNavbar = () => {
               </Button>
             </Group>
           </Accordion.Panel>
+        </Accordion.Item>
+
+        <Accordion.Item value="actividad">
+          <Accordion.Control
+            onClick={() => {
+              navigate("/activity");
+            }}
+             //icon={<IconBuilding size={20} color={getColor("blue")}/>}
+          >
+            {t("options.activity")}
+          </Accordion.Control>
         </Accordion.Item>
       </Accordion>
     </Navbar.Section>

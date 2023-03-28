@@ -12,23 +12,26 @@
   },
   "button": {
     "back": "Volver",
-    "withoutPosition": "Sin posicion en salon"
+    "withoutPosition": "Sin exhibicion en salon"
   },
   "label": {
     "branches": "Sucursal",
     "selectItem": "Seleccionar",
-    "department": "Departanento"
+    "department": "Departanento",
+    "unit":"Unidad",
+    "sku":"SKU",
+    "workOrder":"OT"
   },
   "options": {
-    "products": "Referencias (SKU)",
-    "replacement": "Reposición"
+    "products": "Surtido",
+    "activity": "Actividad"
   },
   "stats": {
-    "total": "Referencias en surtido Vs Total cadena",
+    "total": "Total de refereccias",
     "outOfStock": "Sin stock",
-    "WoInProgress": "OTs en curso",
+    "WoInProgress": "Ordenes de trabajo",
     "broken": "Quebrados",
-    "criticality": "Criticidad (90% - 99%)"
+    "criticality": "Criticidad mayor al 90%"
   },
   "statsRing": {
     "remaining": "Pendientes",
