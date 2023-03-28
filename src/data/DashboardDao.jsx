@@ -1,8 +1,9 @@
-
 import data from "./data.json";
 import branches from "./branches.json";
 import departments from "./departments.json";
 import notExhibited from "./notExhibited.json";
+import activities from "./activity.json";
+import activityData from "./task.json";
 
 async function getData(parameters) {
   try {
@@ -22,11 +23,11 @@ async function getData(parameters) {
     //   });
 
     const found = data.find((item) => {
-      return(item.branch === parameters.branch)
-    })
+      return item.branch === parameters.branch;
+    });
 
     const branch = found ? found : data[parameters.branch];
-    const depto = branch.departmentData[parameters.department]
+    const depto = branch.departmentData[parameters.department];
 
     return depto.data;
   } catch (error) {
@@ -54,7 +55,7 @@ async function getBranches(params) {
     return branches;
   } catch (error) {
     return error;
-  } 
+  }
 }
 
 async function getDepartments(params) {
@@ -77,7 +78,7 @@ async function getDepartments(params) {
     return departments;
   } catch (error) {
     return error;
-  } 
+  }
 }
 
 async function getNotExhibitedItems(params) {
@@ -100,7 +101,7 @@ async function getNotExhibitedItems(params) {
     return notExhibited;
   } catch (error) {
     return error;
-  } 
+  }
 }
 
 async function getDetail(parameters) {
@@ -119,15 +120,89 @@ async function getDetail(parameters) {
     //     s.contextName = s.context.name;
     //     return s;
     //   });
-    
+
     const branch = data[parameters.branch];
     const depto = branch.departmentData[parameters.department];
-    const ret = depto.data[parameters.indicator]?.products ? depto.data[parameters.indicator].products : [];
+    const ret = depto.data[parameters.indicator]?.products
+      ? depto.data[parameters.indicator].products
+      : [];
 
     return ret;
-
   } catch (error) {
     return error;
-  } 
+  }
 }
-export {getData, getBranches, getDepartments, getNotExhibitedItems, getDetail}
+
+
+function groupBy(collection, property) {
+  const ret = {};
+  collection.forEach(element => {
+    if(!ret[element[property]]){
+      ret[element[property]] = [];
+    }
+    ret[element[property]].push(element);
+  });
+
+  return(ret);
+}
+
+async function getActivityData(parameters) {
+  try {
+    //   const requestOptions = {
+    //     method: "GET",
+    //     mode: "cors",
+    //     headers: { "Content-Type": "application/json", token: parameters.token },
+    //   };
+
+    //   const url = API.site.findAllSites;
+    //   const res = await fetch(url, requestOptions);
+    //   const data = await res.json();
+
+    //   data.map((s) => {
+    //     s.contextName = s.context.name;
+    //     return s;
+    //   });
+
+    const ret = activityData.orders.filter((activity) => {
+      return activity.momentum === parameters.momentum;
+    });
+
+    const tasks = groupBy(ret, "task");
+    
+    return tasks;
+  } catch (error) {
+    return error;
+  }
+}
+
+async function getActivities(params) {
+  try {
+    //   const requestOptions = {
+    //     method: "GET",
+    //     mode: "cors",
+    //     headers: { "Content-Type": "application/json", token: parameters.token },
+    //   };
+
+    //   const url = API.site.findAllSites;
+    //   const res = await fetch(url, requestOptions);
+    //   const data = await res.json();
+
+    //   data.map((s) => {
+    //     s.contextName = s.context.name;
+    //     return s;
+    //   });
+
+    return activities;
+  } catch (error) {
+    return error;
+  }
+}
+export {
+  getData,
+  getBranches,
+  getDepartments,
+  getNotExhibitedItems,
+  getDetail,
+  getActivityData,
+  getActivities,
+};

@@ -19,6 +19,7 @@ const AppFrame = () => {
   const [opened, setOpened] = useState(false);
   const [selectedBranch, setSelectedBranch] = useState("0");
   const [selectedDepartment, setSelectedDepartment] = useState("0");
+  const [momentum, setMomentum] = useState(120);
 
   return (
     <AppStateContext.Provider
@@ -27,6 +28,8 @@ const AppFrame = () => {
         setSelectedBranch,
         selectedDepartment,
         setSelectedDepartment,
+        momentum,
+        setMomentum,
         opened,
         setOpened,
       }}
@@ -53,7 +56,7 @@ const AppFrame = () => {
           </Navbar>
         }
         footer={
-          <Footer >
+          <Footer>
             <CustomFooter />
           </Footer>
         }

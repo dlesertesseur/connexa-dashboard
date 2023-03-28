@@ -2,8 +2,8 @@ import React from "react";
 import ActivityDashboard from "../pages/ActivityDashboard";
 import StoresDashboard from "../pages/StoresDashboard";
 import DetailTable from "../pages/DetailTable";
-import { Navigate, Route, Routes } from "react-router-dom";
 import NotExhibited from "../pages/NotExhibited";
+import { Navigate, Route, Routes } from "react-router-dom";
 
 const Dashboard = () => {
   return (

@@ -1,0 +1,10 @@
+[
+  { "title": "OPERANDO", "value": "999", "diff": "88" },
+  { "title": "EN_CORTE", "value": "999", "diff": "88" },
+  { "title": "PICKING", "value": "999", "diff": "88" },
+  { "title": "REPONIENDO", "value": "999", "diff": "88" },
+  { "title": "OFERTAS_Y_PROMOCIONES", "value": "999", "diff": "88" },
+  { "title": "PREPARANDO_PEDIDOS", "value": "999", "diff": "88" },
+  { "title": "CONTROLANDO_PRECIOS", "value": "999", "diff": "0" },
+  { "title": "FIN_DE_JORNADA", "value": "999", "diff": "88" }
+]

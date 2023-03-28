@@ -38,5 +38,15 @@
     "inProgress": "En ejecucion",
     "completed": "Valor",
     "total": "Total"
+  },
+  "statsActivity": {
+    "OPERANDO":"Operando",
+    "EN_CORTE":"En corte",
+    "PICKING":"picking",
+    "REPONIENDO":"Reponiendo",
+    "OFERTAS_Y_PROMOCIONES":"Ofertas y promociones",
+    "PREPARANDO_PEDIDOS":"Prepando pedidos",
+    "CONTROLANDO_PRECIOS":"Trabajando con precios",
+    "FIN_DE_JORNADA":"Fin de jornada"
   }
 }

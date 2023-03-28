@@ -103,7 +103,7 @@ const useStyles = createStyles((theme) => ({
   leadXl: {
     fontFamily: `Greycliff CF, ${theme.fontFamily}`,
     fontWeight: 700,
-    fontSize: 42,
+    fontSize: 36,
     lineHeight: 1,
   },
 
