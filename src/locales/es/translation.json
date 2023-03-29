@@ -20,7 +20,15 @@
     "department": "Departanento",
     "unit":"Unidad",
     "sku":"SKU",
-    "workOrder":"OT"
+    "workOrder":"OT",
+    "profile":"Legajo",
+    "branch":"Sucursal",
+    "woType":"Tipo",
+    "woStatus":"Estado",
+    "woNumber":"Numero",
+    "position":"Posicion",
+    "shelf":"Estante",
+    "module":"Modulo"
   },
   "options": {
     "products": "Surtido",

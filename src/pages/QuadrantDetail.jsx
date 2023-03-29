@@ -4,6 +4,8 @@ import { useLocation, useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { getQuadrantData } from "../data/DashboardDao";
 import { IconAt, IconPhoneCall } from "@tabler/icons-react";
+import OperatorCard from "../components/OperatorCard";
+import OperatorRow from "../components/OperatorRow";
 
 const QuadrantDetail = () => {
   const navigate = useNavigate();
@@ -25,30 +27,7 @@ const QuadrantDetail = () => {
   const createRows = () => {
     const ret = data.map((oper) => {
       return (
-        <Group grow bg={"yellow"} m={5}>
-          <Group noWrap>
-            <Avatar src={"https://picsum.photos/64/64"} size={64} radius="md" />
-            <div>
-              <Text fz="lg" fw={500} sz={{fontFamily: `Greycliff CF, ${theme.fontFamily}`}}>
-                {oper.name}
-              </Text>
-
-              <Group noWrap spacing={10} mt={3}>
-                <IconAt stroke={1.5} size={16} sx={(theme) => ({color: theme.colorScheme === 'dark' ? theme.colors.dark[3] : theme.colors.gray[5]})} />
-                <Text fz="xs" c="dimmed">
-                  {oper.work_order_type}
-                </Text>
-              </Group>
-
-              <Group noWrap spacing={10} mt={5}>
-                <IconPhoneCall stroke={1.5} size={16} sx={(theme) => ({color: theme.colorScheme === 'dark' ? theme.colors.dark[3] : theme.colors.gray[5]})} />
-                <Text fz="xs" c="dimmed">
-                  {oper.sku}
-                </Text>
-              </Group>
-            </div>
-          </Group>
-        </Group>
+        <OperatorRow key={oper.legajo} operator={oper}/>
       );
     });
 
