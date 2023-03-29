@@ -50,7 +50,7 @@ export default function StatsRingCard({
                   {t("statsRing.total")}
                 </Text>
               </Stack>
-              <Stack spacing={0} ml={items.length ? 0 : 25}>
+              <Stack spacing={0} ml={items.length ? 0 : 10}>
                 <Text className={items.length ? classes.lead : classes.leadXl}>{completed}</Text>
                 <Text fz="xs" color="dimmed">
                   {t("statsRing.completed")}
@@ -103,7 +103,7 @@ const useStyles = createStyles((theme) => ({
   leadXl: {
     fontFamily: `Greycliff CF, ${theme.fontFamily}`,
     fontWeight: 700,
-    fontSize: 36,
+    fontSize: 26,
     lineHeight: 1,
   },
 

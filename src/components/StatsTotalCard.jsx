@@ -1,18 +1,7 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
-import {
-  createStyles,
-  Group,
-  Paper,
-  Stack,
-  Text,
-  ThemeIcon,
-} from "@mantine/core";
-import {
-  IconArrowDownRight,
-  IconArrowUpRight,
-  IconEqual,
-} from "@tabler/icons-react";
+import { createStyles, Group, Paper, Stack, Text, ThemeIcon, UnstyledButton } from "@mantine/core";
+import { IconArrowDownRight, IconArrowUpRight, IconEqual } from "@tabler/icons-react";
 import { useState } from "react";
 import { useEffect } from "react";
 
@@ -26,7 +15,7 @@ const useStyles = createStyles((theme) => ({
   },
 }));
 
-const StatsTotalCard = ({ title, data }) => {
+const StatsTotalCard = ({ title, data, onPress }) => {
   const { t } = useTranslation();
   const { classes, theme } = useStyles();
   const [value, setValue] = useState(0);
@@ -43,7 +32,7 @@ const StatsTotalCard = ({ title, data }) => {
   const getIcon = () => {
     let DiffIcon = null;
     let iconColor = null;
-    
+
     if (value > valueAnt) {
       DiffIcon = IconArrowUpRight;
       iconColor = theme.colors.teal[6];
@@ -73,36 +62,32 @@ const StatsTotalCard = ({ title, data }) => {
   };
 
   return (
-    <Paper withBorder p="xs" radius="md" key={title}>
-      <Stack spacing={"xs"}>
-        <Group position="apart">
-          <Group>
-            <Text
-              c="dimmed"
-              tt="uppercase"
-              fw={700}
-              fz="xs"
-              className={classes.label}
-            >
-              {t("statsActivity." + title)}
+    <UnstyledButton onClick={onPress} disabled={value || value > 0 ? false : true}>
+      <Paper withBorder p="xs" radius="md" key={title}>
+        <Stack spacing={"xs"}>
+          <Group position="apart">
+            <Group>
+              <Text c="dimmed" tt="uppercase" fw={700} fz="xs" className={classes.label}>
+                {t("statsActivity." + title)}
+              </Text>
+            </Group>
+            <Group>{getIcon()}</Group>
+          </Group>
+
+          <Group position="center">
+            <Text fw={600} sx={{ fontSize: 46 }}>
+              {value ? value : 0}
             </Text>
           </Group>
-          <Group>{getIcon()}</Group>
-        </Group>
-
-        <Group position="center">
-          <Text fw={600} sx={{ fontSize: 46 }}>
-            {value ? value : "0"}
-          </Text>
-        </Group>
-        {/* <Text c="dimmed" fz="sm" mt="md">
+          {/* <Text c="dimmed" fz="sm" mt="md">
         <Text component="span" c={stat.diff > 0 ? "teal" : "red"} fw={700}>
           {stat.diff}%
         </Text>{" "}
         {stat.diff > 0 ? "increase" : "decrease"} compared to last month
       </Text> */}
-      </Stack>
-    </Paper>
+        </Stack>
+      </Paper>
+    </UnstyledButton>
   );
 };
 

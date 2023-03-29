@@ -9,24 +9,20 @@ import { AppStateContext } from "../context/AppStateContext";
 const ActivityDashboard = () => {
   const navigate = useNavigate();
   const { t } = useTranslation();
-  const { selectedBranch, selectedDepartment, momentum, setMomentum } =
-    useContext(AppStateContext);
+  const { momentum, setMomentum, quadrantsData, setQuadrantsData} = useContext(AppStateContext);
   const [quadrant, setQuadrant] = useState([]);
-  const [data, setData] = useState(null);
 
   useEffect(() => {
     const intervalId = setInterval(() => {
       //console.log(`getActivityData momentum: ${momentum}`);
 
       const params = {
-        branch: selectedBranch,
-        department: selectedDepartment,
         momentum: momentum,
       };
-      
+
       getActivityData(params).then((ret) => {
         if (ret) {
-          setData(ret);
+          setQuadrantsData(ret);
         }
         setMomentum(momentum + 1);
       });
@@ -37,11 +33,17 @@ const ActivityDashboard = () => {
   }, [momentum]);
 
   useEffect(() => {
-    getActivities().then((ret) => {
-      if (ret) {
-        setQuadrant(ret);
-      }
-    });
+    if (quadrant.length === 0) {
+      console.log("Carga cuadrantes");
+
+      getActivities().then((ret) => {
+        if (ret) {
+          setQuadrant(ret);
+        }
+      });
+    }else{
+      console.log("Cuadrantes cargados");
+    }
   }, []);
 
   const createStats = () => {
@@ -50,11 +52,10 @@ const ActivityDashboard = () => {
         <StatsTotalCard
           key={index}
           title={stat.title}
-          data={data ? data[stat.title] : []}
-          // disabled = {data[index]?.products ? false : true}
-          // onPress={() => {
-          //   navigate("/stores/detail", { state: {title:t("stats." + stat.title), indicator:index} });
-          // }}
+          data={quadrantsData ? quadrantsData[stat.title] : []}
+          onPress={() => {
+            navigate("./quadrantDetail", { state: { title: t("stats." + stat.title), quadrant: stat.title } });
+          }}
         />
       );
     });

@@ -3,7 +3,10 @@ import branches from "./branches.json";
 import departments from "./departments.json";
 import notExhibited from "./notExhibited.json";
 import activities from "./activity.json";
+//import activities from "./activityTest.json";
 import activityData from "./task.json";
+
+const database = {};
 
 async function getData(parameters) {
   try {
@@ -123,9 +126,7 @@ async function getDetail(parameters) {
 
     const branch = data[parameters.branch];
     const depto = branch.departmentData[parameters.department];
-    const ret = depto.data[parameters.indicator]?.products
-      ? depto.data[parameters.indicator].products
-      : [];
+    const ret = depto.data[parameters.indicator]?.products ? depto.data[parameters.indicator].products : [];
 
     return ret;
   } catch (error) {
@@ -133,17 +134,28 @@ async function getDetail(parameters) {
   }
 }
 
-
 function groupBy(collection, property) {
   const ret = {};
-  collection.forEach(element => {
-    if(!ret[element[property]]){
+  collection.forEach((element) => {
+    if (!ret[element[property]]) {
       ret[element[property]] = [];
     }
     ret[element[property]].push(element);
   });
 
-  return(ret);
+  return ret;
+}
+
+function removeOperator(arr, operator, momentum) {
+  const ret = arr.filter((obj) => obj.legajo !== operator.legajo);
+  return ret;
+}
+
+function removeOperatorFromQuadrant(quadrants, operator, momentum) {
+  quadrants.forEach((quadrant) => {
+    const newArr = removeOperator(database[quadrant], operator, momentum);
+    database[quadrant] = newArr;
+  });
 }
 
 async function getActivityData(parameters) {
@@ -163,13 +175,20 @@ async function getActivityData(parameters) {
     //     return s;
     //   });
 
-    const ret = activityData.orders.filter((activity) => {
+    const quadrants = Object.keys(database);
+
+    let operatorsInMomentum = activityData.orders.filter((activity) => {
       return activity.momentum === parameters.momentum;
     });
 
-    const tasks = groupBy(ret, "task");
-    
-    return tasks;
+    operatorsInMomentum.forEach((operaror) => {
+      removeOperatorFromQuadrant(quadrants, operaror, parameters.momentum);
+      database[operaror.task].push(operaror);
+    });
+
+    console.log(" getActivityData -> ", parameters.momentum);
+
+    return database;
   } catch (error) {
     return error;
   }
@@ -192,7 +211,38 @@ async function getActivities(params) {
     //     return s;
     //   });
 
+    if (Object.keys(database).length === 0) {
+      activities.forEach((activity) => {
+        database[activity.title] = [];
+      });
+    }
+
     return activities;
+  } catch (error) {
+    return error;
+  }
+}
+
+async function getQuadrantData(params) {
+  try {
+    //   const requestOptions = {
+    //     method: "GET",
+    //     mode: "cors",
+    //     headers: { "Content-Type": "application/json", token: parameters.token },
+    //   };
+
+    //   const url = API.site.findAllSites;
+    //   const res = await fetch(url, requestOptions);
+    //   const data = await res.json();
+
+    //   data.map((s) => {
+    //     s.contextName = s.context.name;
+    //     return s;
+    //   });
+
+    const data = database[params.quadrant];
+    return data;
+    
   } catch (error) {
     return error;
   }
@@ -205,4 +255,5 @@ export {
   getDetail,
   getActivityData,
   getActivities,
+  getQuadrantData,
 };

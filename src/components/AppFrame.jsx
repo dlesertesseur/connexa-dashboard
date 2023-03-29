@@ -19,7 +19,8 @@ const AppFrame = () => {
   const [opened, setOpened] = useState(false);
   const [selectedBranch, setSelectedBranch] = useState("0");
   const [selectedDepartment, setSelectedDepartment] = useState("0");
-  const [momentum, setMomentum] = useState(120);
+  const [quadrantsData, setQuadrantsData] = useState(null);
+  const [momentum, setMomentum] = useState(1);
 
   return (
     <AppStateContext.Provider
@@ -32,6 +33,8 @@ const AppFrame = () => {
         setMomentum,
         opened,
         setOpened,
+        quadrantsData,
+        setQuadrantsData
       }}
     >
       <AppShell
