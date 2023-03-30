@@ -1,14 +1,6 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
-import {
-  Avatar,
-  Badge,
-  Card,
-  Group,
-  Stack,
-  Text,
-  UnstyledButton,
-} from "@mantine/core";
+import { Avatar, Badge, Card, Group, RingProgress, Stack, Text, UnstyledButton } from "@mantine/core";
 
 import { OT_TYPE } from "../data/Constats";
 import { useNavigate } from "react-router-dom";
@@ -36,53 +28,36 @@ const OperatorRow = ({ operator, height = 96 }) => {
         }
       >
         <Card shadow="sm" padding="xs" radius="md" withBorder>
-          <Group spacing={"xs"}>
+          <Group spacing={"xs"} sx={{ justifyContent: "space-between" }}>
             <Group>
-              <Avatar
-                src={"/photo/" + operator.legajo + ".png"}
-                size={height}
-                radius="xs"
-              />
-            </Group>
-            <Group position="apart">
-              <Stack
-                align="flex-start"
-                justify="flex-start"
-                spacing={0}
-                h={height}
-                w={300}
-              >
-                <Text fw={600} fz="md">
-                  {operator.name}
-                </Text>
-                <Group>
-                  <Text fw={600} fz="xs" c={"gray.8"}>
-                    {t("label.profile") + ": " + operator.legajo}
+              <Group>
+                <Avatar src={"/photo/" + operator.legajo + ".png"} size={height} radius="xs" />
+              </Group>
+              <Group>
+                <Stack align="flex-start" justify="flex-start" spacing={0} h={height}>
+                  <Text fw={600} fz="md">
+                    {operator.name}
                   </Text>
-                </Group>
-                <Group>
-                  <Text fw={600} fz="xs" c={"gray.8"} mb={"xs"}>
-                    {t("label.branch") + ": " + operator.sucursal}
-                  </Text>
-                </Group>
-                <Group>
-                  <Badge
-                    size="sm"
-                    variant="filled"
-                    bg={operator.empresa === "Interno" ? "red" : "blue"}
-                  >
-                    {operator.empresa}
-                  </Badge>
-                </Group>
-              </Stack>
+                  <Group>
+                    <Text fw={600} fz="xs" c={"gray.8"}>
+                      {t("label.profile") + ": " + operator.legajo}
+                    </Text>
+                  </Group>
+                  <Group>
+                    <Text fw={600} fz="xs" c={"gray.8"} mb={"xs"}>
+                      {t("label.branch") + ": " + operator.sucursal}
+                    </Text>
+                  </Group>
+                  <Group>
+                    <Badge size="sm" variant="filled" bg={operator.empresa === "Interno" ? "red" : "blue"}>
+                      {operator.empresa}
+                    </Badge>
+                  </Group>
+                </Stack>
+              </Group>
             </Group>
-            {/* <Divider orientation="vertical" /> */}
-            <Stack
-              align="flex-start"
-              justify="flex-start"
-              spacing={0}
-              h={height}
-            >
+            
+            <Stack align="flex-start" justify="flex-start" spacing={0} h={height}>
               <Group position="center" spacing={"xs"}>
                 <Text fw={700} fz="md">
                   {t("label.workOrder") + ":"}
@@ -119,6 +94,22 @@ const OperatorRow = ({ operator, height = 96 }) => {
                   </Text>
                 </Group>
               ) : null}
+            </Stack>
+
+            <Stack spacing={"xs"} sx={{ justifyContent: "center", alignItems: "center" }}>
+              <RingProgress
+                roundCaps
+                thickness={6}
+                size={height}
+                sections={[{ value: eval(operator.porcentaje), color: "teal" }]}
+                label={
+                  <div>
+                    <Text ta="center" fz="md" fw={700}>
+                      {eval(operator.porcentaje).toFixed(1)}%
+                    </Text>
+                  </div>
+                }
+              />
             </Stack>
           </Group>
         </Card>

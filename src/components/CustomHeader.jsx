@@ -1,12 +1,13 @@
 import { useMantineColorScheme, ActionIcon, Image, Flex } from "@mantine/core";
 import { IconSun, IconMoonStars } from "@tabler/icons-react";
 import React from "react";
+import { DIMENSION } from "../data/Constats";
 
 const CustomHeader = () => {
   const { colorScheme, toggleColorScheme } = useMantineColorScheme();
 
   return (
-    <Flex justify={"space-between"} dir={"row"} w={"100%"} align={"center"}>
+    <Flex justify={"space-between"} dir={"row"} w={"100%"} align={"center"} h={DIMENSION.HEADER_HEIGHT}>
       <Image maw={240} src={"/connexa_logo.png"} alt="logo" />
       
       <ActionIcon

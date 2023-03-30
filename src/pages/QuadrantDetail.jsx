@@ -1,19 +1,10 @@
 import React, { useEffect, useState } from "react";
-import {
-  Button,
-  Divider,
-  Group,
-  Paper,
-  ScrollArea,
-  Stack,
-  Text,
-  Title,
-  useMantineTheme,
-} from "@mantine/core";
+import { Button, Divider, Group, Paper, ScrollArea, Stack, Text, Title, useMantineTheme } from "@mantine/core";
 import { useLocation, useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { getQuadrantData } from "../data/DashboardDao";
 import OperatorRow from "../components/OperatorRow";
+import { DIMENSION } from "../data/Constats";
 
 const QuadrantDetail = () => {
   const navigate = useNavigate();
@@ -23,9 +14,7 @@ const QuadrantDetail = () => {
   const [data, setData] = useState([]);
   const theme = useMantineTheme();
 
-  const [parentHeight, setParentHeight] = useState(
-    window.innerHeight - 220 + "px"
-  );
+  const [parentHeight, setParentHeight] = useState(window.innerHeight - (342 - DIMENSION.OPERATOR_CARD) + "px");
 
   useEffect(() => {
     const params = { quadrant: quadrant };
@@ -45,14 +34,16 @@ const QuadrantDetail = () => {
   return (
     <Paper>
       <Group p={"xs"}>
-        <Title order={4}>{t("page.quadrantDetail.title")}</Title>
+        <Title order={4} h={DIMENSION.TITLE_HEIGHT}>
+          {t("statsActivity." + quadrant).toUpperCase()}{" "}
+        </Title>
       </Group>
       <Divider />
-      <Stack>
+      <Stack spacing={0}>
         <ScrollArea h={parentHeight} p={"xs"}>
           {createRows()}
         </ScrollArea>
-        <Group position="right" p={"xs"}>
+        <Group position="right" p={"xs"} >
           <Button
             onClick={() => {
               navigate(-1);

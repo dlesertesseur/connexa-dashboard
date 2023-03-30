@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import ActivityDashboard from "../pages/ActivityDashboard";
 import StoresDashboard from "../pages/StoresDashboard";
 import DetailTable from "../pages/DetailTable";

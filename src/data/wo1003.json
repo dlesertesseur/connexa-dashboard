@@ -1,0 +1,63 @@
+{
+    "work_order_number" : 1003,
+    "work_order_type" : "PICKING Y REPOSICION",
+    "departamento" : "Bebidas con alcohol",
+    "legajo" : 10003,
+    "asignado_a" : "HORACIO VARGAS",
+    "empresa" : "Interno",
+    "sucursal" : 999,
+    "tareas" : 
+    [ 		
+		{ "linea":  1, "task":"REPOSICION", "posicion" : "099-000-1-M01","sku" : "466641 - VINIO TINTO BLEND DADA BOT 750 ML","cantidad":"1 cajas" },
+		{ "linea":  2, "task":"REPOSICION", "posicion" : "099-000-A-M01","sku" : "005525 - FERNET BRANCA BOT 750 ML","cantidad":"2 cajas" },
+		{ "linea":  3, "task":"REPOSICION", "posicion" : "099-000-A-M03","sku" : "203962 - FERNET 1882 BOT 750 ML","cantidad":"1 cajas" },
+		{ "linea":  4, "task":"REPOSICION", "posicion" : "099-000-A-M05","sku" : "001156 - AMERICANO GANCIA BOT 950 ML","cantidad":"2 cajas" },
+		{ "linea":  5, "task":"REPOSICION", "posicion" : "099-000-A-M06","sku" : "002509 - APERITIVO CAZALIS LEG BOT 950 ML","cantidad":"1 cajas" },
+		{ "linea":  6, "task":"REPOSICION", "posicion" : "099-000-A-M07","sku" : "041773 - APERITIVO BITTER CAMPARI BOT 750 ML","cantidad":"1 cajas" },
+		{ "linea":  7, "task":"REPOSICION", "posicion" : "099-000-A-M09","sku" : "267380 - AMERICANO LIMON DR LEMON BOT 1000 ML","cantidad":"3 cajas" },
+		{ "linea":  8, "task":"REPOSICION", "posicion" : "099-000-A-M10","sku" : "467761 - AMERICANO CON LIMON DR LEMON BOT 1000 ML","cantidad":"1 cajas" },
+		{ "linea":  9, "task":"REPOSICION", "posicion" : "099-000-2-M01","sku" : "052493 - VINO MALBEC NIETO SENETINER BOT 750 CMQ","cantidad":"1 cajas" },
+		{ "linea": 10, "task":"REPOSICION", "posicion" : "099-000-B-M01","sku" : "479273 - SIDRA REAL BOT 750 ML","cantidad":"1 cajas" },
+		{ "linea": 11, "task":"REPOSICION", "posicion" : "099-000-B-M02","sku" : "008750 - ANANA FIZZ REAL BOT 750 CMQ","cantidad":"2 cajas" },
+		{ "linea": 12, "task":"REPOSICION", "posicion" : "099-000-B-M03","sku" : "014106 - CLERICO FIZZ REAL BOT 720 CMQ","cantidad":"1 cajas" },
+		{ "linea": 13, "task":"REPOSICION", "posicion" : "099-020-B-M01","sku" : "082855 - MISTELA CROTTA BOT 750 CMQ","cantidad":"2 cajas" },
+		{ "linea": 14, "task":"REPOSICION", "posicion" : "099-020-B-M03","sku" : "002309 - LICOR LIVIANO FRUTILLA CUSENIER BOT 700 CMQ","cantidad":"1 cajas" },
+		{ "linea": 15, "task":"REPOSICION", "posicion" : "097-000-A-M01","sku" : "208271 - VINO TORRONTES RESERVE CAFAYATE BOT 750 CMQ","cantidad":"2 cajas" },
+		{ "linea": 16, "task":"REPOSICION", "posicion" : "097-000-A-M05","sku" : "514833 - VINO BLANCO TORO TTB 1 LTR","cantidad":"1 cajas" },
+		{ "linea": 17, "task":"REPOSICION", "posicion" : "098-000-1-M01","sku" : "001156 - AMERICANO GANCIA BOT 950 ML","cantidad":"1 cajas" },
+		{ "linea": 18, "task":"REPOSICION", "posicion" : "098-000-A-M02","sku" : "511041 - VINO TINTO CLASICO TORO BOT 750 ML","cantidad":"2 cajas" },
+		{ "linea": 19, "task":"REPOSICION", "posicion" : "098-000-A-M03","sku" : "503636 - VINO TINTO CON TAPA TORO TTB 1 LTR","cantidad":"1 cajas" },
+		{ "linea": 20, "task":"REPOSICION", "posicion" : "098-000-A-M04","sku" : "105735 - VINO TINTO DULCE TORO TTB 1 LTR","cantidad":"1 cajas" },
+		{ "linea": 21, "task":"REPOSICION", "posicion" : "098-000-B-M01","sku" : "288591 - VINO TINTO BLEND CANCILLER BOT 750 ML","cantidad":"2 cajas" },
+		{ "linea": 22, "task":"REPOSICION", "posicion" : "098-000-B-M03","sku" : "499890 - VINO TINTO RED BLEND FINCA NATALINA BOT 750 ML","cantidad":"1 cajas" },
+		{ "linea": 23, "task":"REPOSICION", "posicion" : "098-000-B-M05","sku" : "473643 - VINO TINTO BLEND MENDOZA VENDIMIARIO BOT 750 ML","cantidad":"1 cajas" },
+		{ "linea": 24, "task":"REPOSICION", "posicion" : "097-000-B-M01","sku" : "486454 - BLANC DES BLANCS VIOG GENURZ S NICASIA BOT 750 CMQ","cantidad":"1 cajas" },
+		{ "linea": 25, "task":"REPOSICION", "posicion" : "097-000-B-M03","sku" : "472534 - VINO PINOT GRIGIO RESERVA LA CELIA BOT 750 ML","cantidad":"3 cajas" },
+		{ "linea": 26, "task":"REPOSICION", "posicion" : "097-000-B-M04","sku" : "220725 - VINO CHARDONNAY UXMAL BOT 750 CMQ","cantidad":"1 cajas" },
+		{ "linea": 27, "task":"REPOSICION", "posicion" : "097-000-B-M05","sku" : "482720 - VINO CHARDONNAY LOS INTOCAB BOT 750 ML","cantidad":"2 cajas" },
+		{ "linea": 28, "task":"REPOSICION", "posicion" : "095-000-1-M01","sku" : "459699 - VINO DULCE NATURAL MARLO BOT 750 ML","cantidad":"1 cajas" },
+		{ "linea": 29, "task":"REPOSICION", "posicion" : "095-000-A-M01","sku" : "164963 - VINO CHARDONNAY CALLIA ALTA BOT 750 CMQ","cantidad":"2 cajas" },
+		{ "linea": 30, "task":"REPOSICION", "posicion" : "095-000-A-M03","sku" : "500603 - VINO CHARDONNAY TORRONTES CAFAYATE BOT 750 ML","cantidad":"1 cajas" },
+		{ "linea": 31, "task":"REPOSICION", "posicion" : "SEC-900","sku" : "459699 - VINO DULCE NATURAL MARLO BOT 750 ML","cantidad":"1 cajas" },
+		{ "linea": 32, "task":"REPOSICION", "posicion" : "096-000-A-M01","sku" : "124161 - VINO SYRAH. LATITUD 33 BOT 750 CMQ","cantidad":"2 cajas" },
+		{ "linea": 33, "task":"REPOSICION", "posicion" : "096-000-A-M02","sku" : "195181 - VINO SYRAH RESERVA SANTA JULIA BOT 750 CMQ","cantidad":"1 cajas" },
+		{ "linea": 34, "task":"REPOSICION", "posicion" : "096-000-A-M04","sku" : "164501 - VINO TEMPRANILLO RESERVA LATITUD 33 BOT 750 CMQ","cantidad":"2 cajas" },
+		{ "linea": 35, "task":"REPOSICION", "posicion" : "096-000-B-M01","sku" : "171749 - VINO CAB SAUV ESTIBA I BOT 750 CMQ","cantidad":"1 cajas" },
+		{ "linea": 36, "task":"REPOSICION", "posicion" : "096-000-B-M03","sku" : "478528 - VINO CAB SAUV CALLIA ESPE BOT 750 ML","cantidad":"1 cajas" },
+		{ "linea": 37, "task":"REPOSICION", "posicion" : "096-000-B-M04","sku" : "489810 - VINO CAB SAUV FRIDA BOT 750 ML","cantidad":"1 cajas" },
+		{ "linea": 38, "task":"REPOSICION", "posicion" : "095-000-B-M02","sku" : "491245 - VINO MOSCATO GIALLO DULCE NINA BOT 500 ML","cantidad":"3 cajas" },
+		{ "linea": 39, "task":"REPOSICION", "posicion" : "095-000-B-M03","sku" : "188882 - VINO DULCE NATURAL TRAPICHE BOT 750 CMQ","cantidad":"1 cajas" },
+		{ "linea": 40, "task":"REPOSICION", "posicion" : "095-000-B-M04","sku" : "500969 - VINO FINO BLANCO DULCE COSECHA TARDIA BOT 750 ML","cantidad":"1 cajas" }
+	]    
+}
+
+
+
+
+
+
+
+
+
+
+

@@ -1,68 +1,88 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
-import {
-  Avatar,
-  Badge,
-  Card,
-  Group,
-  Paper,
-  Stack,
-  Text,
-  ThemeIcon,
-  UnstyledButton,
-} from "@mantine/core";
-import {
-  IconArrowDownRight,
-  IconArrowUpRight,
-  IconEqual,
-} from "@tabler/icons-react";
-import { useState } from "react";
-import { useEffect } from "react";
+import { Avatar, Badge, Group, Stack, Text, UnstyledButton } from "@mantine/core";
+import { useNavigate } from "react-router-dom";
 
-const OperatorCard = ({ operator, onPress }) => {
+const OperatorCard = ({ operator, height = 96 }) => {
   const { t } = useTranslation();
-  const [value, setValue] = useState(0);
-  const [valueAnt, setValueAnt] = useState(0);
+  const navigate = useNavigate();
+
+  const onPress = () => {
+    navigate("./workOrderDetail", {
+      state: { woId: operator.work_order_number, legajo: operator.legajo },
+    });
+  };
 
   return (
-    <UnstyledButton
-      onClick={onPress}
-      disabled={value || value > 0 ? false : true}
-    >
-      <Card shadow="sm" padding="xs" radius="md" withBorder>
-        <Stack spacing={"xs"}>
+    <Group grow m={"xs"}>
+      <UnstyledButton onClick={onPress} disabled={true}>
+        <Group spacing={"xs"}>
+          <Group>
+            <Avatar src={"/photo/" + operator.legajo + ".png"} size={height} radius="xs" />
+          </Group>
           <Group position="apart">
-            <Stack spacing={0}>
+            <Stack align="flex-start" justify="flex-start" spacing={0} h={height}>
               <Text fw={600} fz="md">
-                {operator.name}
+                {operator.asignado_a}
               </Text>
-
               <Group>
-                <Badge size="sm" variant="filled">
-                  {operator.empresa}
-                </Badge>
-                <Text fw={600} fz="xs">
-                  {operator.legajo}
+                <Text fw={600} fz="xs" c={"gray.8"}>
+                  {t("label.profile") + ": " + operator.legajo}
                 </Text>
               </Group>
+              <Group>
+                <Text fw={600} fz="xs" c={"gray.8"} mb={"xs"}>
+                  {t("label.branch") + ": " + operator.sucursal}
+                </Text>
+              </Group>
+              <Group>
+                <Badge size="sm" variant="filled" bg={operator.empresa === "Interno" ? "red" : "blue"}>
+                  {operator.empresa}
+                </Badge>
+              </Group>
             </Stack>
-            <Group>
-              <Avatar
-                src={"https://picsum.photos/64/64"}
-                size={48}
-                radius="xs"
-              />
+          </Group>
+          {/* <Stack align="flex-start" justify="flex-start" spacing={0} h={height}>
+            <Group position="center" spacing={"xs"}>
+              <Text fw={700} fz="md">
+                {t("label.workOrder") + ":"}
+              </Text>
+              <Text fw={500} fz="md">
+                {operator.work_order_type}
+              </Text>
             </Group>
-          </Group>
-
-          <Group position="center">
-            <Text fw={600} fz="xs">
-              {operator.task}
-            </Text>
-          </Group>
-        </Stack>
-      </Card>
-    </UnstyledButton>
+            <Group position="center" spacing={"xs"}>
+              <Text fw={700} fz="md">
+                {t("label.woStatus") + ":"}
+              </Text>
+              <Text fw={500} fz="md">
+                {operator.status}
+              </Text>
+            </Group>
+            <Group position="center" spacing={"xs"}>
+              <Text fw={700} fz="md">
+                {t("label.position") + ":"}
+              </Text>
+              <Text fw={500} fz="md">
+                {operator.position}
+              </Text>
+            </Group>
+            {operator.task !== OT_TYPE.OPERANDO &&
+            operator.task !== OT_TYPE.EN_CORTE &&
+            operator.task !== OT_TYPE.FIN_DE_JORNADA ? (
+              <Group position="center" spacing={"xs"}>
+                <Text fw={700} fz="md">
+                  {t("label.shelf") + ":"}
+                </Text>
+                <Text fw={500} fz="md">
+                  {operator.shelf}
+                </Text>
+              </Group>
+            ) : null}
+          </Stack> */}
+        </Group>
+      </UnstyledButton>
+    </Group>
   );
 };
 

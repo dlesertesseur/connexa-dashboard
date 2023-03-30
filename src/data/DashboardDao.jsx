@@ -3,8 +3,8 @@ import branches from "./branches.json";
 import departments from "./departments.json";
 import notExhibited from "./notExhibited.json";
 import activities from "./activity.json";
-//import activities from "./activityTest.json";
-import activityData from "./task.json";
+import activityData from "./tasks.json";
+import woData from "./wo.json";
 
 const database = {};
 
@@ -247,6 +247,40 @@ async function getQuadrantData(params) {
     return error;
   }
 }
+
+async function getWO(params) {
+  try {
+    //   const requestOptions = {
+    //     method: "GET",
+    //     mode: "cors",
+    //     headers: { "Content-Type": "application/json", token: parameters.token },
+    //   };
+
+    //   const url = API.site.findAllSites;
+    //   const res = await fetch(url, requestOptions);
+    //   const data = await res.json();
+
+    //   data.map((s) => {
+    //     s.contextName = s.context.name;
+    //     return s;
+    //   });
+
+    //const data = woData[params.woID];
+
+    const data = woData;
+    const found = data.find((wo) => {
+
+      console.log("data.find -> ", wo.work_order_numbe);
+      return(wo.work_order_number === params.woId);
+    })
+
+    console.log("params.woID -> ", params);
+    return found;
+    
+  } catch (error) {
+    return error;
+  }
+}
 export {
   getData,
   getBranches,
@@ -256,4 +290,5 @@ export {
   getActivityData,
   getActivities,
   getQuadrantData,
+  getWO
 };
