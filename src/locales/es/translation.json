@@ -5,6 +5,12 @@
     },
     "datail-outOfStock":{
       "title":"Productos sin stock en sucursal"
+    },
+    "workOrderDetail":{
+      "title":"Detalle de orden de trabajo"
+    },
+    "quadrantDetail":{
+      "title":"Detalle de operarios"
     }
   },
   "notExhibited": {

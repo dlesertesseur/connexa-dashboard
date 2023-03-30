@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import {
+  Avatar,
   Button,
   Divider,
   Group,
@@ -13,13 +14,14 @@ import {
 import { useLocation, useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { getQuadrantData } from "../data/DashboardDao";
+import { IconAt, IconPhoneCall } from "@tabler/icons-react";
+import OperatorCard from "../components/OperatorCard";
 import OperatorRow from "../components/OperatorRow";
 
-const QuadrantDetail = () => {
+const WorkOrderDetail = () => {
   const navigate = useNavigate();
   const { t } = useTranslation();
   const { state } = useLocation();
-  const { title, quadrant } = state;
   const [data, setData] = useState([]);
   const theme = useMantineTheme();
 
@@ -27,12 +29,12 @@ const QuadrantDetail = () => {
     window.innerHeight - 220 + "px"
   );
 
-  useEffect(() => {
-    const params = { quadrant: quadrant };
-    getQuadrantData(params).then((ret) => {
-      setData(ret);
-    });
-  }, []);
+  // useEffect(() => {
+  //   const params = { quadrant: quadrant };
+  //   getQuadrantData(params).then((ret) => {
+  //     setData(ret);
+  //   });
+  // }, []);
 
   const createRows = () => {
     const ret = data.map((oper) => {
@@ -45,7 +47,7 @@ const QuadrantDetail = () => {
   return (
     <Paper>
       <Group p={"xs"}>
-        <Title order={4}>{t("page.quadrantDetail.title")}</Title>
+        <Title order={4}>{t("page.workOrderDetail.title")}</Title>
       </Group>
       <Divider />
       <Stack>
@@ -66,4 +68,4 @@ const QuadrantDetail = () => {
   );
 };
 
-export default QuadrantDetail;
+export default WorkOrderDetail;

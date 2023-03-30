@@ -23,4 +23,17 @@ const productImages= {
   baseUrl: SERVER + ":" + PORT,
   delete: SERVER + ":" + PORT + API_BASE + "/product-images/",
 }
-export { departmentsColors, productImages };
+
+const OT_TYPE = {
+  OPERANDO:"OPERANDO",
+  EN_CORTE:"EN_CORTE",
+  PICKING:"PICKING",
+  REPONIENDO:"REPONIENDO",
+  OFERTAS_Y_PROMOCIONES:"OFERTAS_Y_PROMOCIONES",
+  PREPARANDO_PEDIDOS:"PREPARANDO_PEDIDOS",
+  CONTROLANDO_PRECIOS:"CONTROLANDO_PRECIOS",
+  FIN_DE_JORNADA:"FIN_DE_JORNADA"
+}
+
+
+export { departmentsColors, productImages, OT_TYPE };
