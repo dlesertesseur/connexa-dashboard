@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 import { Avatar, Badge, Group, Stack, Text, UnstyledButton } from "@mantine/core";
 import { useNavigate } from "react-router-dom";
 
-const OperatorCard = ({ operator, height = 96 }) => {
+const OperatorCard = ({ operator, height = 96 , config}) => {
   const { t } = useTranslation();
   const navigate = useNavigate();
 
@@ -18,7 +18,7 @@ const OperatorCard = ({ operator, height = 96 }) => {
       <UnstyledButton onClick={onPress} disabled={true}>
         <Group spacing={"xs"}>
           <Group>
-            <Avatar src={"/photo/" + operator.legajo + ".png"} size={height} radius="xs" />
+            <Avatar src={config.assetsPath+"photo/" + operator.legajo + ".png"} size={height} radius="xs" />
           </Group>
           <Group position="apart">
             <Stack align="flex-start" justify="flex-start" spacing={0} h={height}>

@@ -5,7 +5,7 @@ import { Avatar, Badge, Card, Group, Image, Stack, Text, UnstyledButton } from "
 import { OT_TYPE } from "../data/Constats";
 import { useNavigate } from "react-router-dom";
 
-const WoRow = ({ task, height = 96 }) => {
+const WoRow = ({ task, height = 96, config }) => {
   const { t } = useTranslation();
   const navigate = useNavigate();
 
@@ -20,10 +20,10 @@ const WoRow = ({ task, height = 96 }) => {
       <UnstyledButton onClick={onPress} disabled={true}>
         <Card shadow="sm" padding="xs" radius="md" withBorder>
           <Group spacing={"xs"}>
-            <Group w={height} sx={{justifyContent:"center", alignItems:"center"}}>
+            <Group w={height} sx={{ justifyContent: "center", alignItems: "center" }}>
               <Group>
                 <Image
-                  src={"/sku/" + task.sku.split(" ")[0] + ".jpg"}
+                  src={config.assetsPath + "sku/" + task.sku.split(" ")[0] + ".jpg"}
                   size={height}
                   radius="xs"
                   withPlaceholder

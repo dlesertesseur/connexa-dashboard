@@ -5,7 +5,7 @@ import { Avatar, Badge, Card, Group, RingProgress, Stack, Text, UnstyledButton }
 import { OT_TYPE } from "../data/Constats";
 import { useNavigate } from "react-router-dom";
 
-const OperatorRow = ({ operator, height = 96 }) => {
+const OperatorRow = ({ operator, height = 96, config }) => {
   const { t } = useTranslation();
   const navigate = useNavigate();
 
@@ -31,7 +31,7 @@ const OperatorRow = ({ operator, height = 96 }) => {
           <Group spacing={"xs"} sx={{ justifyContent: "space-between" }}>
             <Group>
               <Group>
-                <Avatar src={"/photo/" + operator.legajo + ".png"} size={height} radius="xs" />
+                <Avatar src={config.assetsPath + "photo/" + operator.legajo + ".png"} size={height} radius="xs" />
               </Group>
               <Group>
                 <Stack align="flex-start" justify="flex-start" spacing={0} h={height}>
@@ -56,7 +56,7 @@ const OperatorRow = ({ operator, height = 96 }) => {
                 </Stack>
               </Group>
             </Group>
-            
+
             <Stack align="flex-start" justify="flex-start" spacing={0} h={height}>
               <Group position="center" spacing={"xs"}>
                 <Text fw={700} fz="md">

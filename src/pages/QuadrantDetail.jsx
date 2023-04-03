@@ -3,8 +3,10 @@ import { Button, Divider, Group, Paper, ScrollArea, Stack, Text, Title, useManti
 import { useLocation, useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { getQuadrantData } from "../data/DashboardDao";
-import OperatorRow from "../components/OperatorRow";
 import { DIMENSION } from "../data/Constats";
+import { useContext } from "react";
+import { AppStateContext } from "../context/AppStateContext";
+import OperatorRow from "../components/OperatorRow";
 
 const QuadrantDetail = () => {
   const navigate = useNavigate();
@@ -13,6 +15,7 @@ const QuadrantDetail = () => {
   const { title, quadrant } = state;
   const [data, setData] = useState([]);
   const theme = useMantineTheme();
+  const { config } = useContext(AppStateContext);
 
   const [parentHeight, setParentHeight] = useState(window.innerHeight - (342 - DIMENSION.OPERATOR_CARD) + "px");
 
@@ -25,7 +28,7 @@ const QuadrantDetail = () => {
 
   const createRows = () => {
     const ret = data.map((oper) => {
-      return <OperatorRow key={oper.legajo} operator={oper} />;
+      return <OperatorRow key={oper.legajo} operator={oper} config={config}/>;
     });
 
     return ret;

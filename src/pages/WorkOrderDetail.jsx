@@ -5,6 +5,8 @@ import { Button, Divider, Group, Paper, ScrollArea, Stack, Text, Title, useManti
 import { useLocation, useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { getWO } from "../data/DashboardDao";
+import { useContext } from "react";
+import { AppStateContext } from "../context/AppStateContext";
 
 const WorkOrderDetail = () => {
   const navigate = useNavigate();
@@ -12,6 +14,7 @@ const WorkOrderDetail = () => {
   const { state } = useLocation();
   const [data, setData] = useState([]);
   const theme = useMantineTheme();
+  const { config } = useContext(AppStateContext);
 
   const [parentHeight, setParentHeight] = useState(window.innerHeight - 380 + "px");
 
@@ -24,7 +27,7 @@ const WorkOrderDetail = () => {
 
   const createRows = () => {
     const ret = data?.tareas?.map((tarea) => {
-      return <WoRow key={tarea.linea} task={tarea} />;
+      return <WoRow key={tarea.linea} task={tarea} config={config}/>;
     });
 
     return ret;
@@ -36,7 +39,7 @@ const WorkOrderDetail = () => {
         <Title order={4}>{(t("page.workOrderDetail.title") + " - " + state.woId).toUpperCase()}</Title>
       </Group>
       <Divider />
-      <OperatorCard operator={data} />
+      <OperatorCard operator={data} config={config}/>
       <Divider />
       <Stack>
         <ScrollArea h={parentHeight} p={"xs"}>

@@ -6,7 +6,7 @@ import Dashboard from "./Dashboard";
 import { AppShell, Navbar, Header, Footer, MediaQuery, Burger, useMantineTheme } from "@mantine/core";
 import { AppStateContext } from "../context/AppStateContext";
 
-const AppFrame = () => {
+const AppFrame = ({config}) => {
   const theme = useMantineTheme();
   const [opened, setOpened] = useState(false);
   const [selectedBranch, setSelectedBranch] = useState("0");
@@ -27,6 +27,7 @@ const AppFrame = () => {
         setOpened,
         quadrantsData,
         setQuadrantsData,
+        config
       }}
     >
       <AppShell
