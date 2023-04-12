@@ -18,7 +18,7 @@ function App() {
   return (
     <ColorSchemeProvider colorScheme={colorScheme} toggleColorScheme={toggleColorScheme}>
       <MantineProvider theme={{ colorScheme }} withGlobalStyles withNormalizeCSS>
-        <BrowserRouter basename="/dashboard">
+        <BrowserRouter basename="/connexa-dashboard">
           <Routes>
             <Route path="*" element={<AppFrame config={config}/>} />
           </Routes>
