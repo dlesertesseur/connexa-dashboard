@@ -1,8 +1,8 @@
-import AppFrame from "./components/AppFrame";
-import "./i18n";
 import { useState } from "react";
 import { MantineProvider, ColorSchemeProvider } from "@mantine/core";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import AppFrame from "./components/AppFrame";
+import "./i18n";
 
 const config = {};
 if (import.meta.env.MODE === "development") {
@@ -18,7 +18,7 @@ function App() {
   return (
     <ColorSchemeProvider colorScheme={colorScheme} toggleColorScheme={toggleColorScheme}>
       <MantineProvider theme={{ colorScheme }} withGlobalStyles withNormalizeCSS>
-        <BrowserRouter basename="/connexa">
+        <BrowserRouter basename="/dashboard">
           <Routes>
             <Route path="*" element={<AppFrame config={config}/>} />
           </Routes>
